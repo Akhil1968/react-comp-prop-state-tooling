@@ -1,18 +1,21 @@
 module.exports = {
-  entry: './app/main.js',
+  entry: './public/main.js',
   output: {
-    path: './app',
+    path: './public',
     filename: 'bundle.js'
   },
+  watch: true,
+  /*
   devServer: {
     inline: true,
-    contentBase: './app',
-    port: 8100
-  },
+    contentBase: './public',
+    port: 3000
+  }
+  */
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel'
       }
